@@ -1,11 +1,11 @@
 var canvas;
-var mouseDownForTear = false
+var mouseDownForTear = false;
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight)
-  canvas.parent('canvas-wrapper')
-  background(45)
-	tear = new tearDrop(width/10, height/8)
-	label = new Label(width/4, height/8, width/2, height*.75)
+  canvas = createCanvas(windowWidth*.6, windowHeight*.8);
+  canvas.parent('canvas-wrapper');
+  background(45);
+	tear = new tearDrop(width/10, height/8);
+	label = new Label((width/2)-(width*(.4/2)), (height/2)-(height*(.75/2)), width*.4, height*.75);
   //cw = new color_wheel();
 }
 
@@ -45,7 +45,7 @@ function mouseReleased(){
 //	}
 //}
 window.onresize = function() {
-  canvas.size(windowWidth, windowHeight);
+  canvas.size(windowWidth*.6, windowHeight*.8);
 };
 //// Draw a rectangle with rounded corners having the following radii:
 // top-left = 20, top-right = 15, bottom-right = 10, bottom-left = 5.
