@@ -1,7 +1,8 @@
 var canvas;
 var mouseDownForTear = false
 function setup() {
-  canvas = createCanvas(800,800);
+  canvas = createCanvas(windowWidth, windowHeight)
+  canvas.parent('canvas-wrapper')
   background(45)
 	tear = new tearDrop(width/10, height/8)
 	label = new Label(width/4, height/8, width/2, height*.75)
